@@ -2,6 +2,7 @@
 body {
   margin: 0; }
 
+/*************** HEADER ************/
 nav {
   display: flex;
   justify-content: space-between; }
@@ -25,26 +26,75 @@ nav {
       text-decoration: none;
       padding: 7px 16px;
       transition: 0.3s;
-      font-family: 'Montserrat', sans-serif; }
+      font-family: "Montserrat", sans-serif; }
 
-.container {
+/******************* MAIN *******************/
+h1 {
+  font-size: 36px;
+  font-weight: 500; }
+
+P {
+  font-family: "Montserrat", sans-serif;
+  line-height: 26px; }
+
+#main {
   display: flex;
   background-color: #1445b3;
   padding: 50px; }
-  .container .info-intro {
+  #main .info-intro {
     display: flex;
     flex-direction: column;
     font-family: "Montserrat", sans-serif; }
-    .container .info-intro div h2 {
+    #main .info-intro div h2 {
       color: #fff;
       margin-bottom: 40px;
       font-size: 48px;
       font-weight: 800; }
-      .container .info-intro div h2 br span {
+      #main .info-intro div h2 span {
         color: #74b5fc;
         text-decoration: underline; }
 
 .img-intro img {
+  display: flex;
   width: 50%;
+  height: auto; }
+
+/*********** ABOUT US ************/
+#about {
+  font-family: "Montserrat", sans-serif; }
+  #about .container {
+    display: flex;
+    flex-direction: column; }
+    #about .container .titulo {
+      color: #283d50;
+      text-align: center;
+      margin: 0px, 0, 20px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #about .container .titulo .titulo p {
+        font-size: 15px;
+        padding-bottom: 60px;
+        color: #556877;
+        width: 50%; }
+
+.box-1 {
+  display: flex;
+  flex-direction: row;
+  margin: 60px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .box-1 .box-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 60px; }
+    .box-1 .box-icon .box-icon .icon {
+      display: flex;
+      flex-direction: column; }
+
+.img-about img {
   height: auto;
-  background-color: yellow; }
+  width: 100%; }

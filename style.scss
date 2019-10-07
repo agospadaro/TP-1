@@ -2,6 +2,8 @@
 $distancia-menu-nav: 7px 16px;
 $padding-left-pag: 100px;
 $color-principal: #1445b3;
+$font-principal: 'Montserrat', sans-serif;
+$text-center: center;
 
 
 
@@ -13,6 +15,8 @@ $color-principal: #1445b3;
 body {
   margin: 0;
 }
+
+/*************** HEADER ************/
 
 nav {
   display: flex;
@@ -50,7 +54,7 @@ nav {
         text-decoration: none;
         padding: $distancia-menu-nav;
         transition: 0.3s;        
-        font-family: 'Montserrat', sans-serif; 
+        font-family: $font-principal; 
        
 
       }      
@@ -59,10 +63,19 @@ nav {
 }
 
 
+/******************* MAIN *******************/
 
-.container {
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+P {
+  font-family: $font-principal;
+  line-height: 26px;
+}
+#main {
   display: flex;
-  
   background-color: $color-principal;
   padding: 50px;
 
@@ -77,12 +90,10 @@ nav {
       font-size: 48px;
       font-weight: 800;
            
-      br span {
+      span {
         color: #74b5fc;
         text-decoration: underline;
-        
-
-        
+               
       }  
     }
   }      
@@ -90,9 +101,69 @@ nav {
 
 
 .img-intro img {
+  display: flex;
   width: 50%;
   height: auto;
-  background-color: yellow; 
+}
 
+
+/*********** ABOUT US ************/
+
+
+#about {
+  font-family: $font-principal;
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    
+    .titulo {  
+      color: #283d50;
+      text-align: $text-center;
+      margin: 0px, 0, 20px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: $text-center;
+    
+      .titulo p {      
+        font-size: 15px;
+        padding-bottom: 60px;
+        color: #556877;
+        width: 50%;
+        
+      }
+    } 
+  }
+}
+
+
+.box-1 {
+  display: flex;
+  flex-direction: row;
+  margin: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+    
+  .box-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 60px;
+
+    .box-icon .icon{
+     display: flex;
+     flex-direction: column;
+     
+    }
+  }
+}
+
+.img-about {  
+  img {
+    height: auto;
+    width: 100%;  
+  }
 }
 
