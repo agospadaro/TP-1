@@ -116,4 +116,14 @@ P {
     font-size: 15px; }
   .choose .container-cards {
     display: flex;
-    background-color: #00458f; }
+    justify-content: center;
+    align-items: center; }
+    .choose .container-cards .cards-choose {
+      background-color: #00458f;
+      height: 300px;
+      width: 250px;
+      margin: 50px;
+      text-align: center;
+      font-size: 14px; }
+      .choose .container-cards .cards-choose p {
+        font-size: 12px; }

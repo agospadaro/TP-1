@@ -184,7 +184,8 @@ P {
     font-family: $font-titles;
     font-size: 36px;
     text-align: $text-centred;
-    font-weight: 500;       
+    font-weight: 500;   
+     
   }
 
   p {
@@ -194,7 +195,21 @@ P {
 
   .container-cards {
     display: flex;
-    background-color: #00458f;
+    justify-content: center;
+    align-items: center;
+
+    .cards-choose {
+      background-color: #00458f;
+      height: 300px;
+      width: 250px;
+      margin: 50px;
+      text-align: $text-centred;
+      font-size: 14px;
+      
+      p {
+        font-size: 12px;
+      }
+    }
   }
 }
 
