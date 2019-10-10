@@ -1,19 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 
 $distancia-menu-nav: 7px 16px;
 $padding-left-pag: 100px;
 $color-principal: #1445b3;
-$font-principal: 'Montserrat', sans-serif;
-$text-center: center;
+$color-secondary: #004a99;
+$font-titles: 'Montserrat', sans-serif;
+$text-centred: center;
 
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
 
 
 
 body {
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
 }
 
 /*************** HEADER ************/
@@ -54,8 +61,7 @@ nav {
         text-decoration: none;
         padding: $distancia-menu-nav;
         transition: 0.3s;        
-        font-family: $font-principal; 
-       
+             
 
       }      
     }
@@ -71,7 +77,6 @@ h1 {
 }
 
 P {
-  font-family: $font-principal;
   line-height: 26px;
 }
 #main {
@@ -82,10 +87,10 @@ P {
   .info-intro {
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    
+       
     div h2 {
       color: #fff;
+      font-family: $font-titles;
       margin-bottom: 40px;
       font-size: 48px;
       font-weight: 800;
@@ -93,7 +98,7 @@ P {
       span {
         color: #74b5fc;
         text-decoration: underline;
-               
+                       
       }  
     }
   }      
@@ -111,20 +116,20 @@ P {
 
 
 #about {
-  font-family: $font-principal;
-  
+    
   .container {
     display: flex;
     flex-direction: column;
     
     .titulo {  
       color: #283d50;
-      text-align: $text-center;
+      font-family: $font-titles;
+      text-align: $text-centred;
       margin: 0px, 0, 20px 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: $text-center;
+      align-items: $text-centred;
     
       .titulo p {      
         font-size: 15px;
@@ -164,6 +169,32 @@ P {
   img {
     height: auto;
     width: 100%;  
+  }
+}
+
+
+
+/****************** WHY CHOOSE US?*******************/
+
+.choose {
+  background-color: $color-secondary;
+  padding: 60px 0;
+    
+  div h2 {
+    font-family: $font-titles;
+    font-size: 36px;
+    text-align: $text-centred;
+    font-weight: 500;       
+  }
+
+  p {
+    text-align: $text-centred;
+    font-size: 15px;
+  }
+
+  .container-cards {
+    display: flex;
+    background-color: #00458f;
   }
 }
 
