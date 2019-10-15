@@ -3,15 +3,19 @@
 * {
   box-sizing: border-box; }
 
+/*************** VARIABLES *************/
+/*************** LINKS *****************/
+/*************** STYLE ******************/
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: #fff; }
 
-/*************** HEADER ************/
+/**************** HEADER **************/
 nav {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-color: #FFF; }
   nav .logo {
     padding: 7px 16px; }
     nav .logo img {
@@ -105,7 +109,7 @@ P {
 /****************** WHY CHOOSE US?*******************/
 .choose {
   background-color: #004a99;
-  padding: 60px 0; }
+  padding: 60px 150px; }
   .choose div h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 36px;
@@ -113,17 +117,69 @@ P {
     font-weight: 500; }
   .choose p {
     text-align: center;
-    font-size: 15px; }
+    font-size: 15px;
+    padding-bottom: 60px; }
   .choose .container-cards {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    flex: 1;
+    margin: 0 50px; }
+    @media (max-width: 600px) {
+      .choose .container-cards {
+        display: flex;
+        flex-direction: column;
+        flex: 100%; } }
     .choose .container-cards .cards-choose {
+      width: 350px;
+      height: 295px;
+      margin: 0 15px;
       background-color: #00458f;
-      height: 300px;
-      width: 250px;
-      margin: 50px;
       text-align: center;
-      font-size: 14px; }
-      .choose .container-cards .cards-choose p {
-        font-size: 12px; }
+      font-size: 14px;
+      border: 1px;
+      border-color: #00458f;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out; }
+      @media (max-width: 600px) {
+        .choose .container-cards .cards-choose {
+          margin-bottom: 15px; } }
+      .choose .container-cards .cards-choose i {
+        font-size: 48px;
+        padding-top: 35px;
+        color: #bfddfe; }
+      .choose .container-cards .cards-choose .text-card {
+        padding: 0 15px 35px 15px; }
+        .choose .container-cards .cards-choose .text-card p {
+          font-size: 15px;
+          line-height: 1.5;
+          padding-bottom: 10px;
+          color: #bfddfe; }
+  .choose a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s; }
+  .choose a:hover {
+    border-bottom: #fff solid 2px; }
+  .choose .cards-choose:hover {
+    background: #003b7a;
+    border-color: #003b7a; }
+  .choose .data {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px; }
+    @media (max-width: 600px) {
+      .choose .data {
+        display: flex;
+        flex-direction: column; } }
+    .choose .data div {
+      text-align: center; }
+    .choose .data span {
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 48px;
+      display: block; }
+    .choose .data p {
+      margin: 0 0 20px 0;
+      color: #bfddfe; }

@@ -3,13 +3,24 @@
 }
 
 
+/*************** VARIABLES *************/
+
 $distancia-menu-nav: 7px 16px;
 $padding-left-pag: 100px;
 $color-principal: #1445b3;
 $color-secondary: #004a99;
+$color-cards: #00458f; 
+$color-cards-secondary:  #bfddfe;
+$text-color: #fff;
 $font-titles: 'Montserrat', sans-serif;
 $text-centred: center;
+$decoration-link: none;
 
+
+
+
+
+/*************** LINKS *****************/
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
@@ -17,17 +28,28 @@ $text-centred: center;
 
 
 
+
+
+
+
+/*************** STYLE ******************/
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
 }
 
-/*************** HEADER ************/
+
+
+
+
+/**************** HEADER **************/
 
 nav {
   display: flex;
   justify-content: space-between;
+  background-color: #FFF;
   
   .logo {
     padding: $distancia-menu-nav;
@@ -58,7 +80,7 @@ nav {
         color: #004289;
         font-size: 14px;
         font-weight: 500;
-        text-decoration: none;
+        text-decoration: $decoration-link;
         padding: $distancia-menu-nav;
         transition: 0.3s;        
              
@@ -178,38 +200,117 @@ P {
 
 .choose {
   background-color: $color-secondary;
-  padding: 60px 0;
+  padding: 60px 150px;
+  
     
   div h2 {
     font-family: $font-titles;
     font-size: 36px;
     text-align: $text-centred;
-    font-weight: 500;   
-     
+    font-weight: 500;        
   }
 
   p {
     text-align: $text-centred;
     font-size: 15px;
+    padding-bottom: 60px;
   }
 
   .container-cards {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    margin: 0 50px;
 
+    @media (max-width: 600px) {      
+      display: flex;
+      flex-direction: column;    
+      flex: 100%; 
+    }
+    
     .cards-choose {
-      background-color: #00458f;
-      height: 300px;
-      width: 250px;
-      margin: 50px;
+      width: 350px;
+      height: 295px;
+      margin: 0 15px;
+      background-color: $color-cards;       
       text-align: $text-centred;
       font-size: 14px;
-      
-      p {
-        font-size: 12px;
+      border: 1px;
+      border-color: #00458f;    
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+    
+
+      @media (max-width: 600px) {
+        margin-bottom: 15px;
       }
+
+            
+      i {
+        font-size: 48px;
+        padding-top: 35px;
+        color:$color-cards-secondary;
+      }         
+      
+      .text-card {
+        padding: 0 15px 35px 15px;
+
+        p {
+          font-size: 15px;
+          line-height: 1.5;
+          padding-bottom: 10px;
+          color: $color-cards-secondary;
+        }       
+      } 
     }
   }
+
+  a {
+    text-decoration: $decoration-link;
+    color: $text-color;
+    font-weight: 600;
+    transition: all 0.5s;                  
+  }
+
+  a:hover {
+    border-bottom: #fff solid 2px;    
+  }
+
+  .cards-choose:hover {
+    background: #003b7a;
+    border-color: #003b7a;    
+  }
+
+  .data {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+
+    @media (max-width: 600px) {
+      
+      display: flex;
+      flex-direction: column;         
+    }
+    
+    div {
+      text-align: $text-centred;
+    }
+    
+    span {
+      font-family: $font-titles;
+      font-weight: bold;
+      font-size: 48px;
+      display: block;    
+    }
+
+    p {
+      margin: 0 0 20px 0;
+      color: $color-cards-secondary;
+    }
+  }
+
 }
+
+
 
