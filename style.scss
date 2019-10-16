@@ -198,10 +198,9 @@ P {
 
 /****************** WHY CHOOSE US?*******************/
 
-.choose {
+#choose {
   background-color: $color-secondary;
   padding: 60px 150px;
-  
     
   div h2 {
     font-family: $font-titles;
@@ -213,22 +212,29 @@ P {
   p {
     text-align: $text-centred;
     font-size: 15px;
-    padding-bottom: 60px;
+    padding-bottom: 60px;    
   }
 
   .container-cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
-    margin: 0 50px;
+    margin: 0 40px;
 
     @media (max-width: 600px) {      
       display: flex;
       flex-direction: column;    
       flex: 100%; 
     }
-    
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+      .container-cards {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;        
+      }
+    }
+     
     .cards-choose {
       width: 350px;
       height: 295px;
@@ -312,5 +318,78 @@ P {
 
 }
 
+/****************** CLIENTS ***************/
+
+#clients {
+  padding: 60px 0;
+  display: block;
+}
 
 
+.seccion-clients {
+  background-color: #ecf5ff;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  div {
+    display: block;
+  }
+
+  .container {
+
+    h2 { 
+      display: block;     
+      color: #283d50;      
+      text-align: center;
+      font-family: $font-titles;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 20px 0;
+      position: relative;
+    }
+
+    p {
+      text-align: center;
+      margin: auto;
+      font-size: 15px;      
+      padding-bottom: 60px;
+      color: #556877;
+      width: 50%;
+    }
+  }
+
+  
+  .box-clients {
+    border-top: 1px solid #d6eaff;
+    border-left: 1px solid #d6eaff;
+    margin-bottom: 30px;
+    display: flex;
+           
+    .box-img {
+      display: flex;
+      flex: 25%;     
+
+      .img-logo {
+        padding: 64px;
+        display: flex;   
+        justify-content: center;   
+        align-items: center;
+        border-right: 1px solid #d6eaff;
+        border-bottom: 1px solid #d6eaff;
+        overflow: hidden;
+        background: #fff;
+        height: 160px;
+
+        img {
+          transition: all 0.4s ease-in-out;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }  
+}
